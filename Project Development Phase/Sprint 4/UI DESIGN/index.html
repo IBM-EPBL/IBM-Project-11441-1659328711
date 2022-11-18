@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="static\CSS\index.css">
+    </head>
+<body > 
+<center>
+    <h1 class="mt-5 text-success">Web Phishing Detection</h1>
+    <br><br><br><br>
+        <form class="form-control d-flex  w-50 border-0 bg-color bg-transparent" action="{{ url_for('result') }}" method="post">
+            <input  class="ms-0 w-75 p-2 me-5" type="text"  name="url" placeholder="Enter the Url....." required>
+            <button class=" btn btn-success w-25"type="submit" name="submit">Detect</button>
+        </form>
+    </center>
+        <div id="output" class="ms-5 me-5 w-75 ">
+            <p class="output-statement p-1 text-center text-{{color}}">{{output}}</p>
+        </div>
+        <p name="para"><p>
+</body>
+</html>
+
+
